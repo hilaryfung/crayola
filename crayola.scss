@@ -9,7 +9,6 @@
 .crayon {
    width: 30px;
    height: 160px;
-   background: red;
    position: relative;
    top: 33px;
 }
@@ -25,24 +24,12 @@
    border-left: 10px solid transparent;
    border-bottom-width: 33px;
    border-bottom-style: solid;
-}
 
-.red {
-   background: red;
-}
-.red:before {
-   border-bottom-color: red;
-}
 
-.blue {
-   background: blue;
-}
-.blue:before {
-   border-bottom-color: blue;
-}
-
-.rotate30 {
-   transform:rotate(30deg);
-   -ms-transform:rotate(30deg); /* IE 9 */
-   -webkit-transform:rotate(30deg); /* Safari and Chrome */
+@for $i from 0 through 11 {
+    .pos-#{$i} {
+        -moz-transform: rotate(30deg * $i);
+        -webkit-transform: rotate(30deg * $i);
+        transform: rotate(30deg * $i);
+    }
 }
