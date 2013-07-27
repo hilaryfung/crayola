@@ -1,40 +1,37 @@
 .crayon {
-   width: 30px;
-   height: 160px;
-   background: red;
-   position: relative;
-   top: 33px;
-}
+  width: 30px;
+  height: 160px;
+  background: red;
+  position: relative;
+  top: 33px; }
 
 .crayon:before {
-   content:"";
-   position: absolute;
-   left: 3px;
-   top: -33px;
-   width: 4px;
-   height: 0;
-   border-right: 10px solid transparent;
-   border-left: 10px solid transparent;
-   border-bottom-width: 33px;
-   border-bottom-style: solid;
-}
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: -33px;
+  width: 4px;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom-width: 33px;
+  border-bottom-style: solid; }
 
 .red {
-   background: red;
-}
+  background: red; }
+
 .red:before {
-   border-bottom-color: red;
-}
+  border-bottom-color: red; }
 
 .blue {
-   background: blue;
-}
+  background: blue; }
+
 .blue:before {
-   border-bottom-color: blue;
-}
+  border-bottom-color: blue; }
 
 .rotate30 {
-   transform:rotate(30deg);
-   -ms-transform:rotate(30deg); /* IE 9 */
-   -webkit-transform:rotate(30deg); /* Safari and Chrome */
-}
+  transform: rotate(30deg);
+  -ms-transform: rotate(30deg);
+  /* IE 9 */
+  -webkit-transform: rotate(30deg);
+  /* Safari and Chrome */ }
