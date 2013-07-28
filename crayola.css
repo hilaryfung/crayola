@@ -6,6 +6,7 @@
   margin-right: 10px; }
 
 .crayon {
+  cursor: pointer;
   width: 30px;
   height: 90px;
   position: relative;
@@ -13,6 +14,7 @@
 
 .crayon-tip {
   content: "";
+  cursor: pointer;
   position: absolute;
   left: 3px;
   top: -33px;

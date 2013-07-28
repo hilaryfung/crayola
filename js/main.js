@@ -19,6 +19,11 @@ makeCircle = function(family) {
         $('.crayon').last().css('background', 'rgb(' + family.rgb + ')');
         $('.crayon').last().css('border-bottom-color', 'rgb(' + family.rgb + ')')
         $('.crayon-tip').last().css('border-bottom-color', 'rgb(' + family.rgb + ')');
+
+        $('.crayon').last().on('click', function() {
+            var rgb = this.style.background;
+            $('.palette-item')[1].innerHTML = rgb;
+        })
     });
 
 }
