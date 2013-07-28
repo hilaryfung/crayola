@@ -1,42 +1,84 @@
-/*
-Syntax error: Invalid CSS after "}": expected "}", was ""
-        on line 35 of crayola.scss
+.palette-item {
+  width: 100px;
+  height: 100px;
+  border: 1px solid #000;
+  float: left;
+  margin-right: 10px; }
 
-30:     .pos-#{$i} {
-31:         -moz-transform: rotate(30deg * $i);
-32:         -webkit-transform: rotate(30deg * $i);
-33:         transform: rotate(30deg * $i);
-34:     }
-35: }
+.crayon {
+  width: 30px;
+  height: 160px;
+  position: relative;
+  top: 33px; }
 
-Backtrace:
-crayola.scss:35
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:1148:in `expected'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:1084:in `expected'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:1079:in `tok!'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:536:in `block'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:529:in `ruleset'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:553:in `block_child'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:546:in `block_contents'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:82:in `stylesheet'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/scss/parser.rb:27:in `parse'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/engine.rb:342:in `_to_tree'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/engine.rb:315:in `_render'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/engine.rb:262:in `render'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:362:in `update_stylesheet'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:203:in `block in update_stylesheets'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:201:in `each'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:201:in `update_stylesheets'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/lib/sass/plugin/compiler.rb:283:in `block in watch'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/vendor/listen/lib/listen/multi_listener.rb:108:in `call'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/vendor/listen/lib/listen/multi_listener.rb:108:in `on_change'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/vendor/listen/lib/listen/multi_listener.rb:117:in `block in initialize_adapter'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/vendor/listen/lib/listen/adapter.rb:198:in `call'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/vendor/listen/lib/listen/adapter.rb:198:in `report_changes'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/vendor/listen/lib/listen/adapter.rb:210:in `poll_changed_dirs'
-/Users/tylerfisher/.rbenv/versions/1.9.3-p0/lib/ruby/gems/1.9.1/gems/sass-3.2.9/vendor/listen/lib/listen/adapters/darwin.rb:38:in `block in start'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Syntax error: Invalid CSS after \"}\": expected \"}\", was \"\"\A         on line 35 of crayola.scss\A \A 30:     .pos-#{$i} {\A 31:         -moz-transform: rotate(30deg * $i);\A 32:         -webkit-transform: rotate(30deg * $i);\A 33:         transform: rotate(30deg * $i);\A 34:     }\A 35: }"; }
+.crayon-tip {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: -33px;
+  width: 4px;
+  height: 0;
+  border-right: 10px solid transparent;
+  border-left: 10px solid transparent;
+  border-bottom-width: 33px;
+  border-bottom-style: solid; }
+
+.pos-0 {
+  -moz-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
+  transform: rotate(0deg); }
+
+.pos-1 {
+  -moz-transform: rotate(30deg);
+  -webkit-transform: rotate(30deg);
+  transform: rotate(30deg); }
+
+.pos-2 {
+  -moz-transform: rotate(60deg);
+  -webkit-transform: rotate(60deg);
+  transform: rotate(60deg); }
+
+.pos-3 {
+  -moz-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg); }
+
+.pos-4 {
+  -moz-transform: rotate(120deg);
+  -webkit-transform: rotate(120deg);
+  transform: rotate(120deg); }
+
+.pos-5 {
+  -moz-transform: rotate(150deg);
+  -webkit-transform: rotate(150deg);
+  transform: rotate(150deg); }
+
+.pos-6 {
+  -moz-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg); }
+
+.pos-7 {
+  -moz-transform: rotate(210deg);
+  -webkit-transform: rotate(210deg);
+  transform: rotate(210deg); }
+
+.pos-8 {
+  -moz-transform: rotate(240deg);
+  -webkit-transform: rotate(240deg);
+  transform: rotate(240deg); }
+
+.pos-9 {
+  -moz-transform: rotate(270deg);
+  -webkit-transform: rotate(270deg);
+  transform: rotate(270deg); }
+
+.pos-10 {
+  -moz-transform: rotate(300deg);
+  -webkit-transform: rotate(300deg);
+  transform: rotate(300deg); }
+
+.pos-11 {
+  -moz-transform: rotate(330deg);
+  -webkit-transform: rotate(330deg);
+  transform: rotate(330deg); }
