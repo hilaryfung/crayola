@@ -23,6 +23,7 @@ makeCircle = function(family) {
         $('.crayon').last().on('click', function() {
             var rgb = this.style.background;
             $('.palette-item')[1].innerHTML = rgb;
+            $('.palette-item')[1].style.backgroundColor=rgb;
         })
     });
 
