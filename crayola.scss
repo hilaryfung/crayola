@@ -8,7 +8,7 @@
 
 .crayon {
    width: 30px;
-   height: 160px;
+   height: 90px;
    position: relative;
    top: 33px;
 }
@@ -33,3 +33,27 @@
         transform: rotate(30deg * $i);
     }
 }
+
+.family {
+  width: 300px;
+  height: 300px;
+  float: left;
+}
+
+.pos-0 {top: 210px; left: 130px;}
+.pos-1 {top: 107px; left: 80px;}
+.pos-2 {top: -22px; left: 44px;}
+.pos-3 {top: -165px; left: 30px;}
+.pos-4 {top: -307px; left: 44px;}
+.pos-5 {top: -435px; left: 79px;}
+.pos-6 {top: -540px; left: 130px;}
+.pos-7 {top: -617px; left: 183px;}
+.pos-8 {top: -670px; left: 225px;}
+.pos-9 {top: -705px; left: 240px;}
+.pos-10 {top: -741px; left: 225px;}
+.pos-11 {top: -793px; left: 185px;}
+
+
+
+
+
