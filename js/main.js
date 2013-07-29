@@ -3,7 +3,6 @@ parseData = function(data) {
     var families = _.chain(data)
         .groupBy(function(d){ return Number(d.family); })
         .value();
-        console.log(families);
 
     _.each(families, makeCircle);
 
