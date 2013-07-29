@@ -21,7 +21,7 @@ makeCircle = function(family) {
 
         $('.crayon').last().on('click', function() {
             var palette_item = document.createElement('div');
-            var rgb = this.style.background;
+            var rgb = this.style.backgroundColor;
 
             palette_item.className = 'palette-item';
             palette_item.style.backgroundColor=rgb;
