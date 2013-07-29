@@ -22,10 +22,14 @@ makeCircle = function(family) {
 
         $('.crayon').last().on('click', function() {
             var palette_item = document.createElement('div');
-            palette_item.className = 'palette-item';
             var rgb = this.style.background;
+
+            palette_item.className = 'palette-item';
             palette_item.style.backgroundColor=rgb;
             palette_item.innerHTML = rgb;
+            
+            palette_item.onclick = function() { this.remove(); };
+
             $('#palette-container').append(palette_item);
         })
     });
