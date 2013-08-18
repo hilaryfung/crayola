@@ -13,10 +13,11 @@ makeFamily = function(family) {
     $('#families').append('<div class="family"></div>');
 
     _.each(family, function(family, i) {
-        $('.family').last().append('<div class="crayon"><div class="crayon-tip"></div></div>');
+        $('.family').last().append('<div class="crayon"><div class="crayon-text"></div><div class="crayon-tip"></div></div>');
         // $('.crayon').last().addClass('pos-' + i);
         $('.crayon').last().css('background', 'rgb(' + family.rgb + ')');
-        $('.crayon').last().css('border-left-color', 'rgb(' + family.rgb + ')')
+        $('.crayon').last().css('border-left-color', 'rgb(' + family.rgb + ')');
+        $('.crayon-text').last().html(family.name);
         $('.crayon-tip').last().css('border-left-color', 'rgb(' + family.rgb + ')');
 
         $('.crayon').last().on('click', function() {
