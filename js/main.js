@@ -4,20 +4,20 @@ parseData = function(data) {
         .groupBy(function(d){ return Number(d.family); })
         .value();
 
-    _.each(families, makeCircle);
+    _.each(families, makeFamily);
 
-}
+}   
 
-makeCircle = function(family) {
+makeFamily = function(family) {
 
     $('#families').append('<div class="family"></div>');
 
     _.each(family, function(family, i) {
         $('.family').last().append('<div class="crayon"><div class="crayon-tip"></div></div>');
-        $('.crayon').last().addClass('pos-' + i);
+        // $('.crayon').last().addClass('pos-' + i);
         $('.crayon').last().css('background', 'rgb(' + family.rgb + ')');
-        $('.crayon').last().css('border-bottom-color', 'rgb(' + family.rgb + ')')
-        $('.crayon-tip').last().css('border-bottom-color', 'rgb(' + family.rgb + ')');
+        $('.crayon').last().css('border-left-color', 'rgb(' + family.rgb + ')')
+        $('.crayon-tip').last().css('border-left-color', 'rgb(' + family.rgb + ')');
 
         $('.crayon').last().on('click', function() {
             var palette_item = document.createElement('div');
