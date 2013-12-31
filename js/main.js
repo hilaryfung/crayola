@@ -24,20 +24,26 @@ makeFamily = function(family) {
 
         $('.crayon').last().on('click', function() {
             if (!_.contains(activeColors, $(this).text())) {
-                var palette_item = document.createElement('div');
+                var paletteItem = document.createElement('div');
                 var rgb = this.style.backgroundColor;
 
-                palette_item.className = 'palette-item';
-                palette_item.style.backgroundColor=rgb;
-                palette_item.innerHTML = rgb;
+                paletteItem.className = 'palette-item ' + $(this).text().replace(/\s+/g, "-");
+                paletteItem.style.backgroundColor=rgb;
+                paletteItem.innerHTML = rgb;
 
-                palette_item.onclick = function() {
+                paletteItem.onclick = function() {
                     this.remove();
                     activeColors.pop(activeColors.indexOf($(this).text()));
                 };
 
-                $('#palette-container').append(palette_item);
+                $('#palette-container').append(paletteItem);
                 activeColors.push($(this).text());
+            }
+
+            else {
+                var colorClass = '.' + $(this).text().replace(/\s+/g, "-");
+                $(colorClass).remove();
+                activeColors.pop(activeColors.indexOf($(this).text()));
             }
         })
     });
