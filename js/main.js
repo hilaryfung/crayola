@@ -6,9 +6,11 @@ parseData = function(data) {
 
     _.each(families, makeFamily);
 
-}   
+}
 
 makeFamily = function(family) {
+
+    var activeColors = [];
 
     $('#families').append('<div class="family"></div>');
 
@@ -21,16 +23,22 @@ makeFamily = function(family) {
         $('.crayon-tip').last().css('border-left-color', 'rgb(' + family.rgb + ')');
 
         $('.crayon').last().on('click', function() {
-            var palette_item = document.createElement('div');
-            var rgb = this.style.backgroundColor;
+            if (!_.contains(activeColors, $(this).text())) {
+                var palette_item = document.createElement('div');
+                var rgb = this.style.backgroundColor;
 
-            palette_item.className = 'palette-item';
-            palette_item.style.backgroundColor=rgb;
-            palette_item.innerHTML = rgb;
-            
-            palette_item.onclick = function() { this.remove(); };
+                palette_item.className = 'palette-item';
+                palette_item.style.backgroundColor=rgb;
+                palette_item.innerHTML = rgb;
 
-            $('#palette-container').append(palette_item);
+                palette_item.onclick = function() {
+                    this.remove();
+                    activeColors.pop(activeColors.indexOf($(this).text()));
+                };
+
+                $('#palette-container').append(palette_item);
+                activeColors.push($(this).text());
+            }
         })
     });
 }
